@@ -14,6 +14,8 @@ $(function() {
     let secInterval;
     let check;
     let checkTwo;
+    let reckCH = true;
+    let isRunning = true;
 
 
     // function startMili(){
@@ -31,13 +33,15 @@ $(function() {
         }, 1000);
     }
 
+    function lapPause(){
+        
+    }
     function pauseWatch(){
         clearInterval(miliInterval);
         clearInterval(secInterval);
         clearInterval(check);
         clearInterval(checkTwo);
     }
-    let isRunning = true;
     function startWatch(){
         if(isRunning == true){
         $(output).empty();
@@ -74,9 +78,19 @@ $(function() {
     }
 
     function lap(){
+        if(isRunning == false){
         let outputText = `${minutes}:${seconds}:${miliseconds} <br />`;
         console.log(outputText);
         $(output).append(outputText)
+        } else if (isRunning == true){
+            minutes = 00;
+            seconds = 00;
+            miliseconds = 00;
+            $mil.text(`00`);
+            $sec.text(`00`);
+            $min.text(`00`);
+            $(output).empty();
+        }
     }
 
     $start
