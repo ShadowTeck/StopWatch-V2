@@ -1,0 +1,52 @@
+@font-face {
+  font-family: 'digital-7.regular';
+  src: url("fonts/digital-7.regular.ttf");
+}
+
+body {
+  font-family: 'digital-7.regular';
+  background-color: black;
+  color: lawngreen;
+}
+
+.wrapper {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  margin: 0 auto;
+  text-align: center;
+}
+
+h1 {
+  font-size: 3.3rem;
+}
+
+#number {
+  letter-spacing: 2px;
+  font-size: 35px;
+  margin-bottom: 5px;
+}
+
+#output {
+  letter-spacing: 1px;
+  font-size: 25px;
+  margin-bottom: 2px;
+}
+
+p {
+  display: inline;
+}
+
+button {
+  background-color: lawngreen;
+  outline: none;
+  border: none;
+}
+
+button:hover {
+  border: 1px solid white;
+}
+/*# sourceMappingURL=style.css.map */
